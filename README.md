@@ -133,14 +133,3 @@ Headers: Authorization: Bearer <JWT_TOKEN>
 | DELETE | `/api/books/:id`          | Delete a specific book you own           | Yes (JWT)     |
 
 ---
-
-## 👩‍🏫 Notes for Teachers
-
-- **bcrypt:** Demonstrates secure password storage. Show students how the plain-text password never touches the database.
-- **JWT (jsonwebtoken):** Explain stateless authentication. The payload includes user ID/email and expires in 1 hour, forcing periodic re-authentication.
-- **Middleware (`middleware/auth.js`):** Highlights how Express middleware can guard routes by validating tokens before letting requests through.
-- **SQLite Setup (`db/setup.js`):** Illustrates how to create tables programmatically on startup—useful when teaching migrations vs. auto-setup.
-- **Route Structure (`routes/users.js`, `routes/books.js`):** Encourages modular design, making it easier for students to navigate and extend the project.
-- **Logging & Error Handling:** Console logs and friendly messages help beginners understand request flow and diagnose issues.
-
-Encourage students to experiment by adding new fields, creating additional secured routes, or building a simple frontend that consumes this API.
